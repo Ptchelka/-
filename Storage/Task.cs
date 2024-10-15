@@ -14,7 +14,7 @@
             Console.WriteLine(name + "\r\n Описание:" +
                                  descript + "\r\n Ответсвенный:" +
                                  responsible + "\r\n Выпонено или нет:" +
-                                 state);
+                                 state); // solid s ?
         }
         public string name { get; }
         public string descript { get; }

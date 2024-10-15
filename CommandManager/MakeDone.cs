@@ -21,7 +21,7 @@ namespace CommandManager
         {
             if (!IsMyTask(name))
             {
-                Console.WriteLine("Такой задачи нет");
+                Console.WriteLine("Такой задачи нет"); // задачи ничего не должны писать
             }
             else
             {

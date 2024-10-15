@@ -9,14 +9,13 @@ namespace CommandManager
         private ICommand makeDone;
         private ICommand giveInformation;
         public ITaskCollection collection;
-        public Manager()
+        public Manager(ITaskCollection collection, ICommand giveInformation, ICommand makeDone, ICommand addNewResponsable, ICommand addNewTask)
         {
-            
-            collection = new TaskCollection();
-            addNewTask = new AddNewTask(collection);
-            addNewResponsable = new AddNewResponsable(collection);
-            makeDone = new MakeDone(collection);
-            giveInformation = new GiveInformation(collection);
+            this.collection = collection;
+            this.giveInformation = giveInformation;
+            this.makeDone = makeDone;
+            this.addNewResponsable = addNewResponsable;
+            this.addNewTask = addNewTask;
         }
         public void AddNewTask(string name, string deskription)
         {
