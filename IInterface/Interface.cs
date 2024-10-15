@@ -1,6 +1,6 @@
 ﻿using CommandManager;
 using Storage;
-namespace IInterface
+namespace IInterface // полохое название проекта
 {
     public class Interface
     {
@@ -17,7 +17,7 @@ namespace IInterface
                                 "3. Отметить задачу как выполненную\r\n" +
                                 "4. Вывести информацию о задаче по назваию\r\n" +
                                 "5. Выйти из программы\r\n");
-            bool f = true;
+            bool f = true; // что такое ф?
             while (f)
             {
                 Console.WriteLine("Выберите действие (1-4)");

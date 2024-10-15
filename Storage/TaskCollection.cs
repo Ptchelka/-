@@ -6,6 +6,7 @@ namespace Storage
 {
     public class TaskCollection : ITaskCollection
     {
+        private const string TasksJson = "tasks.json";
         private static List<Task> tasks;
         public TaskCollection()
         {
@@ -43,8 +44,8 @@ namespace Storage
         public void ToFile()
         {
             string json = JsonSerializer.Serialize(tasks, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText("tasks.json", json);
-            Console.WriteLine("Задачи сохранены в файл tasks.json.");
+            await File.WriteAllTextAsync(TasksJson, json);
+            Console.WriteLine("Задачи сохранены в файл tasks.json."); // solid s ?
         }
 
     }
